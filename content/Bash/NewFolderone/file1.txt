@@ -1,0 +1,3 @@
+Im a programmer
+I like JS
+and mote text
