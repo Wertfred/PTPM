@@ -1,5 +1,7 @@
 ## Alt Linux в Docker
 
+Выполните все этапы работы с проектом по примеру с [Nginx](/content/Docker/ImageLibrary/Nginx.md)
+
 > Никогда в разработке не используйте русские имена файлов и каталогов!
 > Никогда в разработке не используйте пробелы и спец.символы в именах файлов и каталогов!!
 
@@ -13,6 +15,16 @@ docker pull alt:sisyphus
 ##### Запустить и использовать
 ```shell
 docker run -ti --rm --name alt alt:sisyphus /bin/bash
+```
+
+#### Установить приложение Fastfetch в контейнере
+```shell
+apt-get update && apt-get install fastfetch
+```
+
+#### Запустить Fastfetch
+```shell
+fastfetch
 ```
 
 ##### Выйти из контейнера с Alt
