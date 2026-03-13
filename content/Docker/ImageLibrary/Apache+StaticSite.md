@@ -7,28 +7,22 @@
 
 ### Apache со стандартной приветственной страницей контейнера
 
+Создайте папку с HTML файлом в папке Docker-проектов
 ```shell
-docker run -d --name my-apache -p 8081:80 httpd:alpine
-```
-или
-```shell
-docker run -d --name my-apache -p 8081:80 httpd
+mkdir my-site && cd my-site && touch index.html
 ```
 
-### Apache со своей приветственной страницей
-
-Создайте папку с HTML файлом
 ```shell
-mkdir ~/my-site && cd ~/my-site
-```
-```shell
-echo "<h1>Hello Docker!</h1>" > index.html
+echo '<h1>Hello Docker!</h1>' > index.html
 ```
 
-Запустите Apache с монтированием папки
+> Чтобы в веб-странице поддерживался русский язык, вставьте тэг `<meta charset="UTF-8">`
 
-> Перед созданием проекта убедитесь, что порт 8081 не занят другим приложением!
+Запустите **Apache** с монтированием папки
 
+> Перед созданием проекта убедитесь, что порт `8081` не занят другим приложением!
+
+Находясь в папке проекта `my-site`, выполните загрузку образа, создание контейнера с сервером и его запуск:
 ```shell
 docker run -d \
   --name my-apache \

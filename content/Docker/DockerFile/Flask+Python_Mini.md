@@ -1,4 +1,7 @@
-## Flask+Python (мини-проект)
+## Dockerfile. Flask+Python (мини-проект)
+
+> Никогда в разработке не используйте русские имена файлов и каталогов!
+> Никогда в разработке не используйте пробелы и спец.символы в именах файлов и каталогов!
 
 Простой `Dockerfile` для небольшого веб-приложения на **Python** с использованием **Flask**
 
@@ -7,26 +10,26 @@
 
 ### 1. Структура проекта
 
-Одной bash-командой создать всю структуру нового проекта:
+В каталоге для Docker-проектов создать одной bash-командой всю структуру для нового приложения:
 ```shell
 mkdir -p simple_flask_app && touch simple_flask_app/app.py simple_flask_app/requirements.txt simple_flask_app/Dockerfile
 ```
 
 Общая структура проета должна выглядеть так:
 ```shell
-my-first-docker/
+simple_flask_app/
 ├── app.py              # простое Flask-приложение
 ├── requirements.txt    # список зависимостей Python
 └── Dockerfile          # инструкции для сборки образа
 └── .dockerignore       # чтобы исключить ненужные файлы сборки
 ```
 
-Файл requirements.txt:
+### 2. Содержимое файла  `requirements.txt`:
 ```
 Flask==3.0.0
 ```
 
-### 2. Файл Dockerfile:
+### 3. Содержимое файла `Dockerfile`:
 ```dockerfile
 # Базовый образ – официальный легковесный Python
 FROM python:3.11-slim
@@ -44,7 +47,7 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 ```
 
-### 3. Файл .dockerignore
+### 4. Содержимое файла `.dockerignore`
 ```shell
 __pycache__
 *.pyc
@@ -52,17 +55,19 @@ __pycache__
 .env
 ```
 
-### 4. Сборка образа
+### 5. Сборка образа
+
+В командной строке, находясь в папке `simple_flask_app`, выполнить:
 ```shell
 docker build -t my-flask-app .
 ```
 
-### 5. Запуск контейнера
+### 6. Запуск контейнера
 ```shell
 docker run -d --name my-running-app -p 8082:5000 my-flask-app
 ```
 
-### 6. Проверка работы
+### 7. Проверка работы
 
 [Откройте браузер и перейдите по адресу http://localhost:8082](http://localhost:8082)
 

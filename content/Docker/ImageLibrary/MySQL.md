@@ -26,7 +26,7 @@ docker exec -it my-mysql mysql -u root -p
 
 Получить список баз данных:
 ```sql
-\l
+sql
 ```
 Получить версию:
 ```sql

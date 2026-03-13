@@ -1,4 +1,4 @@
-## Самостоятельная работа по созданию из готовых образвых контейнеров различных приложений
+## Самостоятельная работа по созданию из готовых образов различных контейнеров
 
 > Никогда в разработке не используйте русские имена файлов и каталогов!
 > Никогда в разработке не используйте пробелы и спец.символы в именах файлов и каталогов!
@@ -15,8 +15,8 @@
 
 [Пример полного руководства по запустку контейнера с Nginx >>](https://github.com/rurewa/edu_dockers/blob/main/content/Nginx.md)
 
-1. [Welcome to Docker](/content/Docker/ImageLibrary/WelcomeToDocker.md)
 1. [Apache](/content/Docker/ImageLibrary/Apache.md)
+1. [Welcome to Docker](/content/Docker/ImageLibrary/WelcomeToDocker.md)
 1. [Portainer](/content/Docker/ImageLibrary/Portainer.md)
 1. [Speedtest](/content/Docker/ImageLibrary/speedtest.md)
 1. [cAdvisor](/content/Docker/ImageLibrary/cAdvisor.md)

@@ -105,7 +105,7 @@ http://localhost:8080
 - **Username**: jirauser
 - **Password**: jirapassword 
 
-**Шаг 4: Настройка Jira**
+**Шаг 4: Настройка Jira**[text](../../../mfua/content) [text](../../../mfua/.gitignore) [text](../../../mfua/README.md) [text](../../../mfua/Todo.md)
 Укажите название приложения, режим доступа и базовый URL
 
 **Шаг 5: Лицензия**
